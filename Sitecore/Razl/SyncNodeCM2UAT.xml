@@ -1,0 +1,17 @@
+﻿<razl>
+  <connection name="CM" readOnly="true" install="false">
+    <url>http://cm.base.domain.com/</url>
+    <accessGuid>4e877f7b-9f96-4612-9eb4-916f29ef279e</accessGuid>
+    <database>master</database>
+  </connection>
+  <connection name="UAT" readOnly="false" install="false">
+    <url>http://uat.base.domain.com</url>
+    <accessGuid>f6ac498d-36a1-4846-b0dc-1b4f2b4f30de</accessGuid>
+    <database>master</database>
+  </connection>
+  <operation name="CopyAll" source="CM" target="UAT">
+    <parameter name="itemId">$(itemId)</parameter>
+    <parameter name="overwrite">true</parameter>
+	<parameter name="lightningMode">true</parameter>
+  </operation>
+</razl>
